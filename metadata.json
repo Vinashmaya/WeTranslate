@@ -1,0 +1,5 @@
+{
+  "name": "Copy of CRM Polyglot Assistant",
+  "description": "A floating, draggable web widget that translates selected text and generates context-aware AI responses, designed to be injected via bookmarklet.",
+  "requestFramePermissions": []
+}

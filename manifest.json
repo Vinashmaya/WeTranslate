@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "CRM Polyglot Assistant",
+  "version": "1.0",
+  "description": "Translate CRM messages and generate AI responses in the side panel.",
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.drivecentric.com/*", "<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "Open Assistant"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
